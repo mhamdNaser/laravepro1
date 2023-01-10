@@ -20,6 +20,11 @@ Route::get('/', function () {
     return view('welcome', ['array' => $array]);
 });
 
+Route::get('/master', function () {
+
+    return view('layout/master');
+});
+
 Route::get('profile' /* this is path */ , function () {
     return view('profile' ); // file name
 });
