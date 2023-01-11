@@ -1,7 +1,7 @@
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Logo</a>
+      <a class="navbar-brand" href="/">Laravel</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -18,7 +18,7 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Content</a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu bg-danger border-0">
               <li><a class="dropdown-item" href="/user">User</a></li>
               <li><a class="dropdown-item" href="/profile">Profile</a></li>
             </ul>

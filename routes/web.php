@@ -1,8 +1,7 @@
 <?php
 
-use GuzzleHttp\Psr7\Request;
+use App\Http\Controllers\AraayController;
 use Illuminate\Support\Facades\Route;
-use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,14 +14,15 @@ use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
 |
 */
 
+
+Route::get('/user', [AraayController::class ,'showArray']);
+// Route::get('posts/creat{id}', [TestController::class ,'CreateMethod']);
+// Route::get('posts/edit{id}', [TestController::class ,'editMethod']);
+// Route::get('posts/delete{id}', [TestController::class ,'deleteMethod']);
+
 Route::get('/', function () {
-    $array = ['Mona', 'Alaa', 'Mhamd', 'Mahmood', 'Talab', 'Ruba' , 'Naser'];
-    return view('welcome', ['array' => $array]);
-});
-
-Route::get('/master', function () {
-
-    return view('layout/master');
+    $array1 = [ 'Alaa' ,'Mona', 'Mhamd', 'Mahmood', 'Talab', 'Ruba' , 'Naser'];
+    return view('welcome', ['array1' => $array1]);
 });
 
 Route::get('profile' /* this is path */ , function () {
@@ -35,10 +35,6 @@ Route::get('about' /* this is path */ , function () {
 
 Route::get('contact' /* this is path */ , function () {
     return view('contact' ); // file name
-});
-
-Route::get('user' /* this is path */ , function () {
-    return view('user' ); // file name
 });
 
 

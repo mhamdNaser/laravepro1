@@ -10,7 +10,7 @@
     <style>
         .text-shadow
         {
-            text-shadow: 1px 2px 5px green;
+            text-shadow: 1px 2px 4px gray;
         }
 
     </style>
@@ -18,10 +18,10 @@
 </head>
 <body class="antialiased">
     @include('layout.header')
-    <div class="container p-5 mt-5 justify-content-center bg-dark g-2 border border-success rounded-3">
-        <div class="row justify-content-center bg-white g-2 border border-success rounded-3 p-5">
+    <div class="container p-5 mt-5 justify-content-center bg-danger g-2 border border-success rounded-3">
+        <div class="row justify-content-center bg-white g-2 border rounded-3 p-5">
             @section('header-title')
-                <h1 class="text-center text-danger fw-bolder">MUHAMMED NASSER</h1>
+                <h1 class="text-center text-dark fw-bolder">MUHAMMED NASSER</h1>
             @show
             @yield('content')
             @yield('array')
