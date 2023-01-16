@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AraayController;
+use App\Http\Controllers\MoveController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +38,11 @@ Route::get('about' /* this is path */ , function () {
 Route::get('contact' /* this is path */ , function () {
     return view('contact' ); // file name
 });
+
+Route::resource('posts', PostController::class);
+
+Route::resource('moves', MoveController::class);
+
 
 
 
