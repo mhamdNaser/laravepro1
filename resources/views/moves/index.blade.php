@@ -3,12 +3,13 @@
 
 @section('content')
 
-    <a href="moves/add" class="btn btn-success">Create</a>
+    <a href="{{route('moves.create')}}" class="btn btn-success">Create</a>
     <table class="table mt-5">
         <thead class="table-success">
             <th scope="col">ID</th>
             <th scope="col">NAME</th>
             <th scope="col">GENER</th>
+            <th scope="col">IMAGE</th>
             <th scope="col">DESCRIPTION</th>
             <th scope="col">ACTION</th>
         </thead>
@@ -17,6 +18,9 @@
                 <td>{{$move->id}}</td>
                 <td>{{$move->name}}</td>
                 <td>{{$move->gener}}</td>
+                <td>
+                    <img src="{{URL::asset("storage/image/$move->picture_name")}}" alt="">
+                </td>
                 <td>{{$move->description}}</td>
                 <td>
                     <a href=""><i class="material-icons" style="color: black">edit</i></a>

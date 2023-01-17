@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Move;
+use App\Models\picture;
 use Illuminate\Http\Request;
 
 class MoveController extends Controller
@@ -36,11 +37,26 @@ class MoveController extends Controller
      */
     public function store(Request $request)
     {
-        Move::create([
-            'name'          =>$request->name,
-            'gener'         =>$request->gener,
-            'description'   =>$request->description
-        ]);
+        // Move::create([
+        //     'name'          =>$request->name,
+        //     'gener'         =>$request->gener,
+        //     'description'   =>$request->description
+        // ]);
+
+        $move = new Move();
+        $move->name = $request->name;
+        $move->gener = $request->gener;
+        $move->description = $request->description;
+        $move->save();
+
+
+        $Pic = New picture();
+        $movie_img = $request->file('movie_pic')->getClientOriginalName();
+        $request->file('movie_pic')->storeAs('public/image', $movie_img);
+        $Pic->picture_name = $movie_img;
+        $Pic->moves_id = $move->id;
+        $Pic->save();
+
         return redirect()->route('moves.index');
     }
 
