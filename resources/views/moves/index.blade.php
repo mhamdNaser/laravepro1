@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <a href="moves/create" class="btn btn-success">Create</a>
+    <a href="moves/add" class="btn btn-success">Create</a>
     <table class="table mt-5">
         <thead class="table-success">
             <th scope="col">ID</th>

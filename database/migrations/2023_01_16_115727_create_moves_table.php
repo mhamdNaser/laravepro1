@@ -18,6 +18,7 @@ class CreateMovesTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->integer('gener');
+
             $table->timestamps();
         });
     }

@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        .text-shadow
-        {
-            text-shadow: 1px 2px 4px gray;
-        }
+@extends('layout.master')
 
-    </style>
-    <title>@yield('title')</title>
-</head>
-<body>
+
+@section('content')
+
     <div class="container-fluid p-2">
+        <a href="posts/create" class="btn btn-success ms-3">Create</a>
         <div class="container p-3">
             <table class="table table-success table-striped">
 
@@ -40,4 +26,5 @@
             </table>
         </div>
     </div>
-</body>
+
+@endsection

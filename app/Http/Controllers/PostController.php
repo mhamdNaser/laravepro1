@@ -52,7 +52,7 @@ class PostController extends Controller
             'title'=> $request->title,
             'content'=> $request->content,
         ]);
-        return response('Done');
+        return redirect(route('posts.index'));
     }
 
     /**
